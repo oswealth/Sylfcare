@@ -35,7 +35,7 @@ Selfcare has features that can be found through our dropdown navigation bar menu
 
 No need for Authentcation or Authorization, simply book now.
 
-<img width=75% src="https://i.imgur.com/aTtDNRo.png">
+
 
 ## Built With
 * [Python](http://www.python.org) - The Backend Language
