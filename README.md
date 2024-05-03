@@ -5,13 +5,6 @@ Your choice to a Better Mental Health
 [Sylfcare](./index.html) is a web application that is designed to provide easy access to a psychologist without beig stigmatized by society.  
 We believe everyone is unique and deserve to be happy. This is a platform where you can get access to therapists/psychologists who are driven by the mission of helping people live better and happier lives every day.
 
-- [Built With](#built-with)
-- [Future](#future)
-- [Authors](#authors)
-    - [Christopher Choe](#christopher-choe)
-    - [Susan Su](#susan-su)
-- [Acknowledgments](#acknowledgements)
-
 ## The Story
 
 At first, Sylfcare was envisioned as much different to what it is now.
