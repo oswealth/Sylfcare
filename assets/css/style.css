@@ -1,6 +1,6 @@
 
 body {
-  background: #9fc0df;
+  background: #FFB246;
   color: #000000;
   font-family: "Montserrat", Montserrat;
 }
@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background: #1f8ef5;
   overflow: hidden;
   position: relative;
@@ -417,12 +417,24 @@ h1, h2, h3, h4, h5, h6 {
   text-align: end;
 }
 
+#be {
+  text-align: start;
+}
+
 #intro h2 {
   color: #fff;
   margin-bottom: 30px;
   font-size: 60px;
   font-weight: 700;
   
+}
+
+#intro h3 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700
 }
 
 @media (max-width: 768px) {
@@ -502,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
 .home-intro p {
    font-size: 12px;
    text-align: justify;
-   width: 40%;
+   width: 45%;
 } 
 
 .home-intro p span {
@@ -512,59 +524,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-intro video {
-   max-width: 50%;
-   border: 1px solid #000;
-   margin-right: 0.5em;
+  max-width: 50%;
+  border: 1px solid #000;
+  margin-right: 0.5em;
 }
+
 
 /* Services */
 
 #services {
-   padding-top: 4em;
-   background-color: #fff;
-   /* height: 60em;  */
+   background-color: #f9f9f9;
+   /*height: 60em;*/
 }
 
-.service h5 {
+
+
+.serv img {
+  max-width: 100%;
+  border: 1px solid #000;
+  margin-right: 0.5em;
+  height: 15em;
+}
+
+.serve p {
   font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #cbb26a;
 }
 
-.service p {
-  font-size: 12px;
-}
-
-#services h2{
-   /* padding-left: 1em; */
-   padding-top: 1em;
-   color: #FFB246;
-}
-
-.card:hover {
+.img-thumbnail:hover {
    cursor: pointer;
    opacity: .5;
    margin-top: -0.2em;
    margin-bottom: 0.2em;
 }
 
-.card-deck {
-   margin: 2em;
-}
-
-.card-deck img {
-   object-fit: contain;
-}
-
-/* Contact */
+/* bookings */
 
 #contacts {
-   background-image: url(../img/safe.jpg);
-   background-repeat: no-repeat;
+   background-color: #edf5f3;
    margin: 0px; 
-}
-
-.contact {
-   padding-top: 30em;
-
 }
 
 .contact h1 {
@@ -575,20 +575,7 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: 800;
    font-size: 58px;
    line-height: 60px;
-   color: #fff;
-}
-
-.contact h3 {
-   font-family: Montserrat;
-   font-style: normal;
-   font-weight: 800;
-   line-height: 60px;
-   color: #ffffff;
-}
-
-.contact p a {
-   text-decoration: none;
-   color: #fff;
+   color: #373131;
 }
 
 .contact p a:hover {
@@ -598,8 +585,6 @@ h1, h2, h3, h4, h5, h6 {
 .contact p {
    color: #fff;
 }
-
-/* Book Now */
 
 .bookings h1 {
    font-family: Montserrat;
@@ -617,16 +602,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bookings button {
-   width: 20%;
-   height: 70px;
-   margin-left: 3em;
+   width: 40%;
+   height: 80px;
+   margin-left: 2em;
+   margin-top: -5em;
    background: #FFB246;
    border-radius: 5px;
-   font-family: Montserrat ; 
-   font-weight: 700;
-   font-style: normal;
-   color: #fff;
+   
    border: 0;
+}
+
+#cont a{
+  font-family: Montserrat ; 
+  font-weight: 900;
+  font-style: bold;
+  font-size: xx-large;
+  color: #fff;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.contact .text h1 {
+  text-align: left;
+}
+#contact{
+  margin-right: 2em;
+}
+
+#cont li{
+  list-style: none;
+  text-align: center;
 }
 
 /* Footer */
@@ -663,6 +672,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
+#contactz{
+  margin-left: -5em;
+}
+
 .footer {
    color: rgba(0, 0, 0, 0.47);
    font-family: Montserrat;
@@ -690,8 +703,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .jumbo{
     display: flex;
-    flex-direction: column;
-    padding-right: 2em;
+    flex-direction:column;
+    padding-right: 0em;
   }
 
   .foo {
@@ -773,109 +786,5 @@ h1, h2, h3, h4, h5, h6 {
   .service p {
     font-size: 12px;
   }
-    
-}
 
-
-/* Consultation Form Styles */
-
-body {
-  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* This creates a blue gradient */
-  color: #000000;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Modal Styles */
-#consultationModal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 40px;
-  border-radius: 20px;
-  width: 60%;
-  max-width: 600px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* Form Styles */
-#consultationForm {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-#consultationForm h2 {
-  font-size: 28px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
-#consultationForm label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-  color: #555;
-}
-
-#consultationForm input[type="text"],
-#consultationForm input[type="email"],
-#consultationForm select,
-#consultationForm textarea {
-  width: 100%;
-  border: 2px solid #ddd;
-  margin-bottom: 20px;
-  padding: 15px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  color: #333;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-}
-
-#consultationForm input[type="text"]:focus,
-#consultationForm input[type="email"]:focus,
-#consultationForm select:focus,
-#consultationForm textarea:focus {
-  border-color: #ffb246;
-  outline: none;
-}
-
-#consultationForm textarea {
-  height: 120px;
-}
-
-#consultationForm button[type="submit"] {
-  background: #ffb246;
-  border: 0;
-  padding: 15px 30px;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#consultationForm button[type="submit"]:hover {
-  background: #946114;
 }
