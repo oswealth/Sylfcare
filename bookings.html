@@ -39,12 +39,15 @@
 
   <!-- JavaScript code -->
   <script>
-  // Open the consultation form when the button is clicked
-  document.getElementById("open-consultation-form").addEventListener("click", function() {
-    document.getElementById("consultation-popup").style.display = "block";
-  });
+    // Open the consultation form when the button is clicked
+    document.getElementById("open-consultation-form").addEventListener("click", function() {
+      // Hide the "Book Now!!!" button
+      document.getElementById("open-consultation-form").style.display = "none";
+      // Display the consultation form
+      document.getElementById("consultation-popup").style.display = "block";
+    });
 
-  // Handle form submission
+    // Handle form submission
   document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();
     // You can add form submission logic here, like sending data to a server
@@ -57,5 +60,5 @@
   });
   </script>
 
-</body>
-</html>
+  </body>
+  </html>

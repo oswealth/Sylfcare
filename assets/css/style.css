@@ -788,3 +788,52 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 }
+
+
+/* Services Page Styles */
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: calc(50% - 20px); /* Adjusted width to accommodate two items per row with a small gap */
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Added background color */
+  transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Added hover effect to elevate the item slightly */
+}
+
+.service-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Changed color to improve readability */
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffb246;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.service-item a:hover {
+  background-color: #e09d36;
+}

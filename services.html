@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Sylfcare</title>
+    <!-- Include your CSS files here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="services-list">
+            <!-- Service 1 -->
+            <div class="service-item">
+                <h2>Individual Therapy</h2>
+                <p>Individual therapy offers personalized counseling sessions tailored to meet the unique needs and concerns of individuals. It provides a safe and confidential space for clients to explore their thoughts, feelings, and behaviors, with the support and guidance of a qualified therapist. Individual therapy aims to help clients gain insight into their challenges, develop coping strategies, and work towards personal growth and healing.</p>
+                <a href="bookings.html" class="btn-book">Book a Session</a>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-item">
+                <h2>Teen/Youth Therapy</h2>
+                <p>Teen and youth therapy focuses on addressing the emotional, social, and behavioral issues commonly experienced by adolescents. It provides a supportive environment for young people to express themselves, navigate peer relationships, manage stress, and cope with challenges such as academic pressure, family conflicts, and identity issues. Teen therapy helps adolescents develop resilience, improve communication skills, and build healthy coping mechanisms.</p>
+                <a href="bookings.html" class="btn-book">Book a Session</a>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-item">
+                <h2>Family Therapy</h2>
+                <p>Family therapy involves working with families to improve communication, resolve conflicts, and strengthen relationships. It recognizes that family dynamics play a significant role in individual well-being and seeks to address issues within the family system. Family therapists help family members understand each other's perspectives, identify patterns of interaction, and develop effective problem-solving strategies. Family therapy aims to foster greater harmony, cohesion, and mutual support among family members.</p>
+                <a href="bookings.html" class="btn-book">Book a Session</a>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-item">
+                <h2>Couples Therapy</h2>
+                <p>Couples therapy is designed to help couples improve their relationship and overcome challenges. It provides a neutral space for partners to explore issues such as communication breakdowns, conflicts, trust issues, and intimacy concerns. Couples therapists help couples identify underlying patterns of behavior, improve communication skills, and develop strategies for resolving conflicts constructively. Couples therapy aims to strengthen the emotional bond between partners, enhance mutual understanding, and promote long-term relationship satisfaction.</p>
+                <a href="bookings.html" class="btn-book">Book a Session</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript code -->
+<script>
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all the "Book a Session" buttons
+        var bookButtons = document.querySelectorAll(".btn-book");
+
+        // Loop through each button and attach a click event listener
+        bookButtons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                // Prevent the default action of the link (i.e., navigating to the booking.html page)
+                event.preventDefault();
+                
+                // Get the href attribute of the clicked button (which should be the link to the booking form)
+                var bookingsFormLink = button.getAttribute("href");
+
+                // Redirect the user to the booking form page
+                window.location.href = bookingsFormLink;
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
