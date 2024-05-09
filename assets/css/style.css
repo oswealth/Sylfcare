@@ -537,7 +537,10 @@ h1, h2, h3, h4, h5, h6 {
    /*height: 60em;*/
 }
 
-
+.services {
+  padding-top: 2em;
+  background-color: #ccc;
+}
 
 .serv img {
   max-width: 100%;
@@ -789,6 +792,139 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+/* Consultation Form Styles */
+
+body {
+  background-color: #555; /* This creates a blue gradient */
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+#consultation-form {
+  background-color: #5c9090;
+  width: 50%;
+  border-radius: 2em;
+  margin-left: 20em;
+  margin-top: 1em;
+  padding-left: 3em;
+  height: 42em;
+}
+
+#consultation-form h2 {
+  padding-top: 1em;
+  text-align: center;
+  color: #f9f9f9;
+}
+
+#consultation-form button {
+  min-height: 5em;
+  min-width: 7em;
+  border-radius: 1em;
+  border: none;
+  background-color: #0f4c81;
+  color: #f9f9f9;
+  font-weight: bolder;
+  margin-left: 40%;
+}
+
+#bookingForm {
+  color: #000;
+}
+
+/* Modal Styles */
+#consultationModal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Form Styles */
+#consultationForm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#consultationForm h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+#consultationForm label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  color: #555;
+}
+
+#consultationForm input[type="text"],
+#consultationForm input[type="email"],
+#consultationForm select,
+#consultationForm textarea {
+  width: 100%;
+  border: 2px solid #ddd;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#consultationForm input[type="text"]:focus,
+#consultationForm input[type="email"]:focus,
+#consultationForm select:focus,
+#consultationForm textarea:focus {
+  border-color: #ffb246;
+  outline: none;
+}
+
+#consultationForm textarea {
+  height: 120px;
+}
+
+#consultationForm button[type="submit"] {
+  background: #ffb246;
+  border: 0;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#consultationForm button[type="submit"]:hover {
+  background: #946114;
+}
 
 /* Services Page Styles */
 
@@ -835,5 +971,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-item a:hover {
+  background-color: #e09d36;
+}
+
+/* Blogs Page Styles */
+
+.blog {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  width: calc(50% - 20px); /* Adjusted width to accommodate two items per row with a small gap */
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Added background color */
+  transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+.blog-item:hover {
+  transform: translateY(-5px); /* Added hover effect to elevate the item slightly */
+}
+
+.blog-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Changed color to improve readability */
+}
+
+.blog-item p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.blog-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffb246;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.blog-item a:hover {
   background-color: #e09d36;
 }
