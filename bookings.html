@@ -25,6 +25,14 @@
           <input type="text" id="name" name="name" required><br><br>
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required><br><br>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required><br><br>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select><br><br>
           <label for="therapy">Type of Therapy:</label>
           <select id="therapy" name="therapy" required>
               <option value="individual">Individual Therapy</option>
@@ -52,17 +60,29 @@
     });
 
     // Handle form submission
-  document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // You can add form submission logic here, like sending data to a server
-    // For now, let's just display a success message
-    alert("Consultation booked successfully. Please check your email for further details and instructions.");
-    // Clear the form fields
-    document.getElementById("bookingForm").reset();
-    // Hide the consultation form
-    document.getElementById("consultation-popup").style.display = "none";
-  });
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      // Get selected therapy and age
+      var therapy = document.getElementById("therapy").value;
+      var age = parseInt(document.getElementById("age").value);
+
+      // Validate age for Teen/Youth Therapy
+      if (therapy === "teen" && (age < 5 || age > 18)) {
+        alert("Teen/Youth Therapy only accepts ages from 5 to 18.");
+      } else {
+        // You can add form submission logic here, like sending data to a server
+        // For now, let's just display a success message
+        alert("Consultation booked successfully. Please check your email for further details and instructions.");
+        // Clear the form fields
+        document.getElementById("bookingForm").reset();
+        // Hide the consultation form
+        document.getElementById("consultation-popup").style.display = "none";
+        // Redirect to the services page
+        window.location.href = "services.html";
+      }
+    });
   </script>
 
-  </body>
-  </html>
+</body>
+</html>
