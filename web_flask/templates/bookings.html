@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Session - Sylfcare</title>
+
+  <link href="../static/img/Browser(1).png" rel="icon">
+  <link href="../static/img/Browser(1).png" rel="apple-touch-icon">
+  
   <!-- Include your CSS files here -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
   <!-- Form for Booking Consultation -->
@@ -21,10 +25,18 @@
           <input type="text" id="name" name="name" required><br><br>
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required><br><br>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required><br><br>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select><br><br>
           <label for="therapy">Type of Therapy:</label>
           <select id="therapy" name="therapy" required>
               <option value="individual">Individual Therapy</option>
-              <option value="teen">Teen/Youth Therapy</option>
+              <option value="teen">Child/Teen Therapy</option>
               <option value="family">Family Therapy</option>
               <option value="couple">Couple Therapy</option>
           </select><br><br>
@@ -37,30 +49,8 @@
     </div>
   </section>
 
-  <!-- JavaScript code -->
-  <script>
-    // Open the consultation form when the button is clicked
-    document.getElementById("open-consultation-form").addEventListener("click", function() {
-      // Hide the "Book Now!!!" button
-      document.getElementById("open-consultation-form").style.display = "none";
-      // Display the consultation form
-      document.getElementById("consultation-popup").style.display = "block";
-    });
-
-    // Handle form submission
-  document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // You can add form submission logic here, like sending data to a server
-    // For now, let's just display a success message
-    alert("Consultation booked successfully. Please check your email for further details and instructions.");
-    // Clear the form fields
-    document.getElementById("bookingForm").reset();
-    // Hide the consultation form
-    document.getElementById("consultation-popup").style.display = "none";
-    // Redirect to the services page
-    window.location.href = "services.html";
-  });
-  </script>
-
-  </body>
-  </html>
+  <!-- JS Script -->
+  <script src="../static/js/bookings_form.js"></script>
+  
+</body>
+</html>
