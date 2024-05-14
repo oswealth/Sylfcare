@@ -3,6 +3,7 @@ import sys
 sys.path.append('../web_flask')  # Add the web_flask directory to sys.path
 from app import app, db, Booking
 
+
 class FlaskTest(unittest.TestCase):
 
     def setUp(self):
@@ -37,6 +38,8 @@ class FlaskTest(unittest.TestCase):
         response = self.app.post('/submit-booking', data=dict(
             name='John Doe',
             email='john@example.com',
+            age=30,
+            gender='male',
             therapy='individual',
             about='I need help with anxiety',
             reason='I want to improve my mental health'
@@ -47,7 +50,10 @@ class FlaskTest(unittest.TestCase):
         booking = Booking.query.filter_by(email='john@example.com').first()
         self.assertIsNotNone(booking)
         self.assertEqual(booking.name, 'John Doe')
+        self.assertEqual(booking.age, 30)  # Check age field
+        self.assertEqual(booking.gender, 'male')  # Check gender field
         self.assertEqual(booking.therapy, 'individual')
+
 
 if __name__ == '__main__':
     unittest.main()

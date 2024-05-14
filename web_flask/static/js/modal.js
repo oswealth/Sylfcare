@@ -14,12 +14,14 @@ document.getElementById("open-consultation-modal").addEventListener("click", fun
     // Validate form fields
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
+    let age = document.getElementById("age").value.trim();
+    let gender = document.getElementById("gender").value.trim();
     let therapy = document.getElementById("therapy").value;
     let about = document.getElementById("about").value.trim();
     let reason = document.getElementById("reason").value.trim();
 
     // Simple validation example
-    if (name === "" || email === "" || about === "" || reason === "") {
+    if (name === "" || email === "" || age === "" || gender === "" || about === "" || reason === "") {
       alert("Please fill in all required fields.");
       return;
     }
